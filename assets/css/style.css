@@ -1,0 +1,15 @@
+h1 {
+    font-family: 'Oswald', sans-serif;
+    position: absolute;
+    left: 44%;
+    top: 20%;
+    font-size: xxx-large;
+}
+
+#logo {
+    height: 150px;
+    width: 180px;
+    position: absolute;
+    left: 20%;
+    top: -260%;
+}
