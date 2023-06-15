@@ -11,18 +11,38 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Playfair+Display:wght@600&display=swap');
     </style>
-    </style>
+
     <h1>
         The Actor Quiz!
-        <img id="logo" src="/assets/images/masks.png">
+        <img class="logo" src="/assets/images/masks.png">
     </h1>
 
+    <div class="game-area">
+        <div class="question-area">
 
+        </div>
 
-
-    <div id="answers-area">
-        <p class="score">Correct <span id="correct-score">0</span></p>
-        <p class="score">Incorrect <span id="incorrect-score">0</span></p>
+        <div id="quiz-container">
+            <h1 id="question"></h1>
+            <ul id="options">
+              <li><input type="radio" name="answer" value="1" /> <span id="option1"></span></li>
+              <li><input type="radio" name="answer" value="2" /> <span id="option2"></span></li>
+              <li><input type="radio" name="answer" value="3" /> <span id="option3"></span></li>
+              <li><input type="radio" name="answer" value="4" /> <span id="option4"></span></li>
+            </ul>
+            <button data-type="submit" id="submit-btn">Submit</button>
+          </div>
+        
+          <div id="result-container">
+            <h2>Your Score: <span id="score"></span></h2>
+          </div>
+    
+    
+    
+        <div id="answers-area">
+            <p class="score">Correct <span id="correct-score">0</span></p>
+            <p class="score">Incorrect <span id="incorrect-score">0</span></p>
+        </div>
     </div>
 
     <script src="/assets/js/script.js"></script>
