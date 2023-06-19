@@ -3,47 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="assets/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actor Quiz</title>
+    <title>Film Quiz</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');</style>
 </head>
 <body>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Playfair+Display:wght@600&display=swap');
-    </style>
 
-    <h1>
-        The Actor Quiz!
-        <img class="logo" src="/assets/images/masks.png">
-    </h1>
+    <div id="container"></div>
 
-    <div class="game-area">
-        <div class="question-area">
+    <h1 id="heading">The Film Quiz!</h1>
+    <button id="newQuestionButton" onclick="NewQuestion()">Next Question</button>
 
-        </div>
-
-        <div id="quiz-container">
-            <h1 id="question"></h1>
-            <ul id="options">
-              <li><input type="radio" name="answer" value="1" /> <span id="option1"></span></li>
-              <li><input type="radio" name="answer" value="2" /> <span id="option2"></span></li>
-              <li><input type="radio" name="answer" value="3" /> <span id="option3"></span></li>
-              <li><input type="radio" name="answer" value="4" /> <span id="option4"></span></li>
-            </ul>
-            <button data-type="submit" id="submit-btn">Submit</button>
-          </div>
+    <form id="Question">
+        <h2>First MCU film?</h2>
+        <input type="radio" name="qestion1" value="a"> a) Captian America: The First Avenger<br>
+        <input type="radio" name="qestion1" value="b"> b) The Incredible Hulk<br>
+        <input type="radio" name="qestion1" value="c"> c) Iron Man<br>
+        <input type="radio" name="qestion1" value="d"> d) The Amazing Spider-Man<br>
+    
+        <button id="SubmitButton" onclick="CheckAnswer()">Sumbit!</button>
         
-          <div id="result-container">
-            <h2>Your Score: <span id="score"></span></h2>
-          </div>
-    
-    
-    
-        <div id="answers-area">
-            <p class="score">Correct <span id="correct-score">0</span></p>
-            <p class="score">Incorrect <span id="incorrect-score">0</span></p>
-        </div>
-    </div>
+      </form>
 
     <script src="/assets/js/script.js"></script>
 </body>
