@@ -11,22 +11,25 @@
 </head>
 <body>
 
-    <div id="container"></div>
+<div id="container">
 
-    <h1 id="heading">The Film Quiz!</h1>
-    <button id="newQuestionButton" onclick="NewQuestion()">Next Question</button>
+ <div id="question-container" class="hide">
 
-    <form id="Question">
-        <h2>First MCU film?</h2>
-        <input type="radio" name="qestion1" value="a"> a) Captian America: The First Avenger<br>
-        <input type="radio" name="qestion1" value="b"> b) The Incredible Hulk<br>
-        <input type="radio" name="qestion1" value="c"> c) Iron Man<br>
-        <input type="radio" name="qestion1" value="d"> d) The Amazing Spider-Man<br>
-    
-        <button id="SubmitButton" onclick="CheckAnswer()">Sumbit!</button>
-        
-      </form>
+    <div id="question">Question</div>
 
-    <script src="/assets/js/script.js"></script>
+    <div id="answer-buttons" class="btn-container">
+        <button class="btn">Answer 1</button>
+        <button class="btn">Answer 2</button>
+        <button class="btn">Answer 3</button>
+        <button class="btn">Answer 4</button>
+    </div>
+ </div>
+    <div id="controls">
+        <button id="start-btn" class="start-btn btn">Start</button>
+        <button id="next-btn" class="next-btn btn hide">Next</button>
+    </div>
+</div>
+
+    <script defer src="/assets/js/script.js"></script>
 </body>
 </html>
