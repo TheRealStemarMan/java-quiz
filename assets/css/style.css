@@ -1,47 +1,89 @@
-body {
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+  }
+  
+  body {
+    --hue: var(--hue-neutral);
+    padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100vw;
     height: 100vh;
-    font-family: Cabin;
-}
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--hue), 100%, 20%);
+  }
 
-#container {
-    width: 1000px;
-    background-color: gray;
-    padding: 15px;
-    border-radius: 10px;
-    max-width: 80%;
-}
-
-.btn-container {
-    display: grid;
-    gap: 5px;
-    margin: 10px 0;
-}
-
-.btn {
-    border-radius: 10px;
-}
-
-.btn:hover {
-    border-color: rgb(255, 255, 255);
-    background-color: rgb(192, 192, 192);
-}
-
-#start-btn, #next-btn {
-    padding: 10px 10px;
+  #title {
+    position: absolute;
+    margin-top: -400px;
     font-size: xx-large;
-    font-weight: bolder;
-}
-
-#controls {
+    color: white;
+    font-family: 'Cabin', sans-serif;
+  }
+  
+  body.correct {
+    --hue: var(--hue-correct);
+  }
+  
+  body.wrong {
+    --hue: var(--hue-wrong);
+  }
+  
+  .container {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+  }
+  
+  .btn {
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+  }
+  
+  .btn:hover {
+    border-color: black;
+  }
+  
+  .btn.correct {
+    --hue: var(--hue-correct);
+    color: black;
+  }
+  
+  .btn.wrong {
+    --hue: var(--hue-wrong);
+  }
+  
+  .start-btn, .next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+  
+  .controls {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.hide {
+  }
+  
+  .hide {
     display: none;
-}
+  }
